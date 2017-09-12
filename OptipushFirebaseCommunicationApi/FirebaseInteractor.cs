@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OptipushFirebaseCommunicationApi
 {
-    public class Class1
+    public class FirebaseInteractor
     {
+
     }
 }
