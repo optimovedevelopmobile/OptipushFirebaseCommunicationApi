@@ -18,9 +18,13 @@ namespace OptipushFirebaseCommunicationApi
             this.app = app;
         }
 
-        public void CreateDynamicLink(string screenName, Dictionary<string, object> d, DynamicLinkCallback callback)
+        public void CreateDynamicLink(string screenName, Dictionary<string, object> data, DynamicLinkCallback callback)
         {
-
+            DynamicLinkReuqestData requestData = new DynamicLinkReuqestData.Factory("bw4se.app.goo.gl")
+                .SetLinkData(screenName, data)
+                .SetPackageName(OptipushApp.SupportedOS.Andorid, "com.optimove.testSDK")
+                .Create();
+            Console.WriteLine(requestData.ToJson());
         }
 
         public void ExecuteTestCampaign(OptipushCampaignData data, TestCampaignCallback callback)

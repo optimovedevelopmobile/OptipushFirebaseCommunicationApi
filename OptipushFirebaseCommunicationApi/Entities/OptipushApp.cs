@@ -6,13 +6,18 @@ namespace OptipushFirebaseCommunicationApi.Entities
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string OS { get; set; }
+        public SupportedOS OS { get; set; }
         public string PackageName { get; set; }
         public List<OptipushDynamicLink> DynamicLinks { get; set; }
-    }
 
-    public enum OptipushAppStatus
-    {
-        Available, Deleted
+        public enum OptipushAppStatus
+        {
+            Available, Deleted
+        }
+
+        public enum SupportedOS
+        {
+            Andorid, iOS
+        }
     }
 }
