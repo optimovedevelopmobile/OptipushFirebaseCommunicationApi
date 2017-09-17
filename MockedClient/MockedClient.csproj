@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2FEAE171-7DB4-40F9-91A2-21806A8B1EDA}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{05EABEE4-329F-4175-B3E9-B7C14A616A9C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OptipushFirebaseCommunicationApi</RootNamespace>
-    <AssemblyName>OptipushFirebaseCommunicationApi</AssemblyName>
+    <RootNamespace>MockedClient</RootNamespace>
+    <AssemblyName>MockedClient</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,19 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Internal\DynamicLinkError.cs" />
-    <Compile Include="Entities\Internal\DynamicLinkResponse.cs" />
-    <Compile Include="Entities\Internal\DynamicLinkReuqestData.cs" />
-    <Compile Include="Entities\Optimove\OptipushApp.cs" />
-    <Compile Include="Entities\Optimove\OptipushBrand.cs" />
-    <Compile Include="Entities\Internal\OptipushCampaignData.cs" />
-    <Compile Include="Entities\Optimove\OptipushDynamicLink.cs" />
-    <Compile Include="Entities\Internal\PushMessageRequestData.cs" />
-    <Compile Include="FirebaseInteractor.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OptipushFirebaseCommunicationApi\OptipushFirebaseCommunicationApi.csproj">
+      <Project>{2feae171-7db4-40f9-91a2-21806a8b1eda}</Project>
+      <Name>OptipushFirebaseCommunicationApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

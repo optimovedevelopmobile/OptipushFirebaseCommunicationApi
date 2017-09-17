@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptipushFirebaseCommunicati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptipushFirebaseCommunicationApiUnitTests", "OptipushFirebaseCommunicationApiUnitTests\OptipushFirebaseCommunicationApiUnitTests.csproj", "{91797700-4639-4094-A7E1-DA9E4212DE5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockedClient", "MockedClient\MockedClient.csproj", "{05EABEE4-329F-4175-B3E9-B7C14A616A9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{91797700-4639-4094-A7E1-DA9E4212DE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91797700-4639-4094-A7E1-DA9E4212DE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91797700-4639-4094-A7E1-DA9E4212DE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05EABEE4-329F-4175-B3E9-B7C14A616A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05EABEE4-329F-4175-B3E9-B7C14A616A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05EABEE4-329F-4175-B3E9-B7C14A616A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05EABEE4-329F-4175-B3E9-B7C14A616A9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

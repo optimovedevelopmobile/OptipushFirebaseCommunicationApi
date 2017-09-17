@@ -34,7 +34,7 @@ namespace OptipushFirebaseCommunicationApi.Entities
 
             internal Factory SetLinkData(string screenName, IDictionary<string, object> data)
             {
-                if (Regex.IsMatch(screenName, "^[A-Z\\s]+$"))
+                if (Regex.IsMatch(screenName, @"^[A-Z\s]+$"))
                 {
                     throw new ArgumentException("Screen name contains illegal characters", "screenName");
                 }
